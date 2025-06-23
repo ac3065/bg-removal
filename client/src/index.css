@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import "tailwindcss";
+
+/* Now start your styles */
+* {
+  font-family: Outfit, sans-serif;
+}
+
+/* rest of your CSS */
+
+.slider {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 0px; /* ✅ Remove visible track line */
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  pointer-events: none; /* ✅ Prevent accidental track interaction */
+}
+
+/* ✅ Blue Thumb Only (Visible and Draggable) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background-color: #2563eb;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  pointer-events: all; /* ✅ Enable dragging */
+}
+
+.slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background-color: #2563eb;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  pointer-events: all;
+}
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 30px;
+  min-height: 30px;
+  background-image: url(/slide_icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-layer {
+  background-image: url(/bg_layer.png);
+}
